@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<!-- GPT優化的bootstrap -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 示範</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/0605-color.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-book fa-3x"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="fa-solid fa-house-user"></i>首頁
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-info"></i>關於我們
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-images"></i>動物快照
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">熊貓<i class="fa-solid fa-1"></i>
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">狐狸<i class="fa-solid fa-2"></i>
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">貓咪<i class="fa-solid fa-3"></i>
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">狐蒙<i class="fa-solid fa-4"></i>
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-regular fa-chart-bar"></i>其他小動物</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">
+                            <i class="fa-solid fa-spinner"></i>施工中</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="請輸入要尋找的小動物" aria-label="Search">
+                    <button class="btn btn-outline-success text-nowrap" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>搜尋
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="images/bamboo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">國寶熊貓</h5>
+                        <p class="card-text">熊貓以竹子為主要食物來源，圓潤可愛的外型與黑白相間的毛色深受喜愛，是珍貴的保育動物代表。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/fox.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">森林狐狸</h5>
+                        <p class="card-text">狐狸擁有靈敏的聽覺與敏捷的行動能力，常穿梭於森林之中，以機智與警覺聞名於自然界。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/cat.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">可愛貓咪</h5>
+                                <p class="card-text">貓咪個性獨立又溫馴，喜歡探索周遭環境，柔軟的毛髮與療癒模樣讓許多人愛不釋手。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/hugo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">活潑狐蒙</h5>
+                        <p class="card-text">狐蒙生活於非洲草原地區，習慣群體活動並具高度警戒心，能透過合作共同守護家族安全。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link disabled">Power BYxxx 0605</a>
+            </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
