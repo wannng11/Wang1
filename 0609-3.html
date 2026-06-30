@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<!-- GPT優化的表格 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP旅館列表</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/0605-color2.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="erp-header">
+            <h1 class="erp-title">ERP 旅館列表</h1>
+            <p class="erp-subtitle"></p>旅館管理列表</p>
+        </div>
+
+        <table class="table table-bordered table-hover table-rwd erp-table">
+            <caption>旅館列表</caption>
+            <thead class="erp-header">
+                <tr>
+                    <th>編號</th>
+                    <th>名稱</th>
+                    <th>縣市名稱</th>
+                    <th>鄉鎮區名稱</th>
+                    <th>電話</th>
+                    <th>房型</th>
+                    <th>價格</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="mybody">
+                <!-- <tr>
+                    <td data-th="編號"></td>
+                    <td data-th="名稱"></td>
+                    <td data-th="縣市名稱"></td>
+                    <td data-th="鄉鎮區名稱"></td>
+                    <td data-th="電話"></td>
+                    <td data-th="房型"></td>
+                    <td data-th="價格"></td>
+                    <td data-th="Email"></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-4.0.0.js"></script>
+    <script>
+        $(function () {
+            const Hotel = [
+                {
+                    Name: "親水89饗樂民宿",
+                    City: "宜蘭縣",
+                    Tel: "03-960-1234",
+                    Town: "五結鄉",
+                    RoomType: "雙人房",
+                    Price: 2800,
+                    Email: "info@water89.com.tw"
+                },
+                {
+                    Name: "法頌休閒居",
+                    City: "宜蘭縣",
+                    Tel: "03-958-5678",
+                    Town: "冬山鄉",
+                    RoomType: "四人房",
+                    Price: 4200,
+                    Email: undefined
+                },
+                {
+                    Name: "蘋果的家渡假別墅民宿",
+                    City: "南投縣",
+                    Tel: "",
+                    Town: "集集鎮",
+                    RoomType: "家庭房",
+                    Price: 5000,
+                    Email: null
+                },
+                {
+                    Name: "思源居民宿",
+                    City: "南投縣",
+                    Tel: undefined,
+                    Town: "埔里鎮",
+                    RoomType: "雙人房",
+                    Price: 2600,
+                    Email: "contact@siyuanbnb.tw"
+                },
+                {
+                    Name: "凱旋新宿商旅",
+                    City: "臺東縣",
+                    Tel: "089-325-666",
+                    Town: "臺東市",
+                    RoomType: "商務雙人房",
+                    Price: 3200,
+                    Email: "reservation@victoryhotel.com.tw"
+                },
+                {
+                    Name: "九份觀海樓民宿",
+                    City: "新北市",
+                    Tel: "02-2496-6123",
+                    Town: "瑞芳區",
+                    RoomType: "海景雙人房",
+                    Price: 3800,
+                    Email: "oceanview@jiufen.com.tw"
+                },
+                {
+                    Name: "123會館",
+                    City: "宜蘭縣",
+                    Tel: "0928-073-502",
+                    Town: "五結鄉",
+                    RoomType: "四人房",
+                    Price: 4500,
+                    Email: "service@123villa.tw"
+                },
+                {
+                    Name: "春夏秋冬民宿",
+                    City: "宜蘭縣",
+                    Tel: "0905-052-769",
+                    Town: null,
+                    RoomType: "雙人房",
+                    Price: 2500,
+                    Email: ""
+                },
+                {
+                    Name: "山水雅舍",
+                    City: "花蓮縣",
+                    Tel: null,
+                    Town: "",
+                    RoomType: "景觀套房",
+                    Price: 3600,
+                    Email: "booking@mountainwater.tw"
+                },
+                {
+                    Name: "海風旅店",
+                    City: "台中市",
+                    Tel: "08-886-7788",
+                    Town: undefined,
+                    RoomType: "海景四人房",
+                    Price: 5200,
+                    Email: "service@seabreezehotel.tw"
+                }
+            ];
+            const cleanHotel = Hotel.map(function (item, index) {
+                let city = item.City;
+                if (city == "台中市") {
+                    item.City = "臺中市"
+                }//    將台中市改成臺中市
+
+                let Town = (item.Town ?? "").trim();
+                if (Town == "") {
+                    Town = "行政區未提供";
+                } // 移除前後空白;若沒有資料，顯示 行政區未提供
+                let Tel = (item.Tel ?? "").trim();
+                if (Tel == "") {
+                    Tel = "未提供";
+                }
+                let Email = (item.Email ?? "").trim();
+                if (Email == "") {
+                    Email = "未提供";
+                }
+                return {
+                    id: index + 1,
+                    Name: item.Name.trim(),
+                    City: item.City,
+                    Tel: (Tel ?? "未提供").trim(),
+                    Town: (Town ?? "行政區未提供").trim(),
+                    RoomType: item.RoomType.trim(),
+                    Price: Number(item.Price),
+                    Email: (Email ?? "未提供").trim()
+                };
+            });
+            console.log("原本清洗的資料", Hotel);
+            console.log("清洗後的資料", cleanHotel);
+
+            // 將資料渲染至table #mybody
+            cleanHotel.forEach(function (item) {
+                let strHTML = `<tr>
+                    <td data-th="編號"><span>${item.id}</span></td>
+                    <td data-th="名稱"><span>${item.Name}</span></td>
+                    <td data-th="縣市名稱"><span>${item.City}</span></td>
+                    <td data-th="鄉鎮區名稱"><span>${item.Town}</span></td>
+                    <td data-th="電話"><span>${item.Tel}</span></td>
+                    <td data-th="房型"><span>${item.RoomType}</span></td>
+                    <td data-th="價格"><span>${item.Price}</span></td>
+                    <td data-th="Email"><span>${item.Email}</span></td>
+                </tr>`;
+                $("#mybody").append(strHTML);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
