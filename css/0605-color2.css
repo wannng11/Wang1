@@ -1,0 +1,133 @@
+body{
+    background-color:#f4f6f9;
+    font-family:"Microsoft JhengHei",sans-serif;
+}
+
+.container{
+    margin-top:30px;
+}
+
+.erp-header{
+    background-color:#2c3e50;
+    color:#ffffff;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.erp-title{
+    font-size:2.5rem;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+.erp-subtitle{
+    margin:0;
+    color:#d6dce5;
+}
+
+.erp-table{
+    background-color:#ffffff;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.erp-table caption{
+    caption-side:top;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#495057;
+    padding-bottom:10px;
+}
+
+.erp-table thead{
+    background-color:#343a40;
+    color:#ffffff;
+}
+
+.erp-table thead th{
+    text-align:center;
+    vertical-align:middle;
+    letter-spacing:1px;
+}
+
+.erp-table tbody td{
+    vertical-align:middle;
+}
+
+.erp-table tbody tr:nth-child(even){
+    background-color:#f8f9fa;
+}
+
+.erp-table tbody tr:hover{
+    background-color:#dbeafe;
+    transition:.3s;
+}
+
+.erp-table tbody td:first-child{
+    font-weight:bold;
+    color:#0d6efd;
+}
+
+.erp-table tbody td:nth-child(3){
+    color:#dc3545;
+    font-weight:bold;
+}
+
+.erp-table tbody td:nth-child(4){
+    color:#198754;
+    font-weight:bold;
+}
+
+.product-hot{
+    background-color:#fff8e1 !important;
+}
+
+.product-lowstock{
+    background-color:#ffebee !important;
+}
+
+.product-lowstock td:nth-child(4){
+    color:#dc3545 !important;
+    font-weight:900;
+}
+
+@media screen and (max-width:768px){
+
+    .table-rwd thead,
+    .table-rwd caption{
+        display:none;
+    }
+
+    .table-rwd tbody tr{
+        display:block;
+        margin-top:15px;
+        border:2px solid #6c757d;
+        border-radius:10px;
+        background-color:#ffffff;
+        padding:10px;
+    }
+
+    .table-rwd tbody tr td{
+        display:block;
+        overflow:hidden;
+        border:none;
+    }
+
+    .table-rwd tbody tr td::before{
+        content:attr(data-th)" : ";
+        display:block;
+        float:left;
+        width:35%;
+        text-align:right;
+        padding-right:15px;
+        font-weight:bold;
+        color:#0d6efd;
+    }
+
+    .table-rwd tbody tr td span{
+        display:block;
+        float:left;
+        width:65%;
+    }
+}

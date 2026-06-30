@@ -1,0 +1,65 @@
+/* 動物主題配色 */
+
+body{
+    background-color: #f5f1e8;
+}
+
+/* 導覽列 */
+.navbar{
+    background: linear-gradient(90deg,#355e3b,#6b8e23)!important;
+}
+
+/* 搜尋按鈕 */
+.btn-outline-success{
+    color: #355e3b;
+    border-color: #355e3b;
+}
+
+.btn-outline-success:hover{
+    background-color: #355e3b;
+    color: white;
+}
+
+/* 卡片 */
+.card{
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    transition: all .3s;
+    background-color: #fffdf8;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+/* 圖片 */
+.card-img-top{
+    height: 280px;
+    object-fit: cover;
+}
+
+/* 標題 */
+.card-title{
+    color: #355e3b;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* 內文 */
+.card-text{
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer{
+    margin-top: 30px;
+    background-color: #355e3b;
+    padding: 15px;
+}
+
+footer .nav-link{
+    color: white;
+}

@@ -1,0 +1,27 @@
+:root {
+  /* Background */
+  --bg-primary: #1e252f;
+  --bg-secondary: #2a3441;
+  --bg-card: #34404f;
+
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* Accent */
+  --accent-primary: #5f8fb8;
+  --accent-secondary: #7ca6c7;
+  --accent-light: #a8c7df;
+
+  /* Border */
+  --border-color: #4a5568;
+
+  /* Status */
+  --success: #6fa67a;
+  --warning: #d1a95f;
+  --danger: #c56b6b;
+
+  /* Shadow */
+  --shadow: rgba(0, 0, 0, 0.2);
+}
